@@ -1,0 +1,193 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* CABEÇALHO COM FLEXBOX */
+
+.topo {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.links {
+    display: flex;
+    gap: 25px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: #38bdf8;
+}
+
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+    text-align: center;
+    padding: 55px 20px;
+    background-color: #dbeafe;
+}
+
+.apresentacao h1 {
+    font-size: 32px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+
+/* GRID DOS PRODUTOS */
+
+.produtos {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* CARTÕES COM FLEXBOX */
+
+.cartao {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    min-height: 290px;
+}
+
+.icone {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cartao h2 {
+    font-size: 20px;
+}
+
+.preco {
+    color: #0284c7;
+    font-weight: bold;
+}
+
+.cartao p {
+    margin-top: 12px;
+    color: #64748b;
+}
+
+.cartao button {
+    margin-top: auto;
+    padding: 12px;
+    min-height: 44px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0284c7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cartao button:hover {
+    background-color: #0369a1;
+}
+
+
+/* SOBRE */
+
+.sobre {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e2e8f0;
+}
+
+.sobre h2 {
+    margin-bottom: 10px;
+}
+
+
+/* RODAPÉ COM FLEXBOX */
+
+footer {
+    background-color: #0f172a;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .topo {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .apresentacao h1 {
+        font-size: 24px;
+    }
+    .produtos {
+        grid-template-columns: 1fr;
+        margin: 25px auto;
+    }
+    .cartao {
+        min-height: 260px;
+    }
+}
